@@ -10,6 +10,13 @@
     padding: 5px;
 }
 
+.containerHorizontal{
+    width: 250px;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .timeView {
     font-family: 'Helvetica Neue', sans-serif;
@@ -21,4 +28,78 @@
 .btn {
     min-width: 70px;
     min-height: 30px;
+    margin: 0 0 20px;
+    padding: 5px 3px 7px 3px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.9);
+    background: rgba(255,255,255,.75);
+    color: rgba(0,0,0,0.9);
+    font: 15px 'Open Sans Condensed',sans-serif;
+    border-radius:0.2em;
 }
+
+.btn:hover {
+    cursor: pointer;
+    background: rgba(0,0,0,.60);
+    color: white;
+}
+
+.countdownHolder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 190px;
+    width:100%;
+    margin:0 auto;
+    font: 50px/1.5 'Open Sans Condensed',sans-serif;
+    text-align:center;
+    letter-spacing:-3px;
+ }
+
+
+  .countdownHolder .position{
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .countdownHolder .position .digit{
+    position:relative;
+    width:1em;
+    background-color:#444;
+    border-radius:0.2em;
+    text-align:center;
+    color:#fff;
+    letter-spacing:-1px;
+    padding: 0 30px;
+  }
+
+  .countdownHolder .position .digit.static{
+    box-shadow:1px 1px 1px rgba(4, 4, 4, 0.35);
+    
+    background-image: linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+    background-image: -o-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+    background-image: -moz-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+    background-image: -webkit-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+    background-image: -ms-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+    
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.5, #3A3A3A),
+      color-stop(0.5, #444444)
+    );
+  }
+
+  .countdownHolder .countDiv{
+    display:inline-block;
+    width:16px;
+    height:1.6em;
+    position:relative;
+  }
+
+  .description__item {
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }

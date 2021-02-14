@@ -79,12 +79,21 @@ const StopWatch = () => {
 
     return (
         <div className={styles.container}>
-            <div className={styles.timeView}>{count}</div>
-            <div>
+            <div className={styles.countdownHolder}>
+                <span className={styles.position}>
+                    <span className={`${styles.digit} ${styles.static}`}>
+                        {count}
+                    </span>
+                </span>
+            </div>
+            <div className={styles.containerHorizontal}>
                 <button className={styles.btn} ref={startStopButtonRef}>Start/Stop</button>
                 <button className={styles.btn} ref={resetButtonRef}>Reset</button>
                 <button className={styles.btn} ref={waitButtonRef}>Wait</button>
             </div>
+            <p className={styles.description__item}><b>Start/Stop</b> - starts/stops stopwatch. If stops, time will be reseted to 00:00:00</p>
+            <p className={styles.description__item}><b>Wait</b> - stops timer. To proceed counting click "Start/Stop"(button activates after double clicking on it)</p>
+            <p className={styles.description__item}><b>Reset</b> - resets timer and starts counting from scratch</p>
         </div>
     );
 }
